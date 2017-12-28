@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listening Musics</h1>
+
+<div class="row">
+  <% @musics.each do |music| %>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src ="<%= music.image %>" alt ="disco">
+      <div class="caption">
+        <h3><%= music.disc %></h3>
+        <h5><%= music.artist %></h5>
+        <%= link_to "More Info", music, class: "btn btn-warning"%>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Music', new_music_path, class: "btn btn-warning" %>

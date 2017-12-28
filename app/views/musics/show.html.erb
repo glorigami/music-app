@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+  <left>
+  <h1><%= @music.disc %></h1>
+  </left>
+  
+  <div class="row">
+    <div class="col-4">
+      <img src="<%= @music.image %>" alt="disc" height="250px" width="250px">
+    </div>
+    <div class="col-8">
+      <h3><%= @music.artist %></h3>
+      <h5><%= @music.year %></h5>
+      <h4>Songs: <%= @music.songs %></h4>
+      <br>
+      <h5>Gender: <%= @music.genre %></h5>
+     </div>
+  </div>
+
+<%= link_to 'Edit', edit_music_path(@music) %> |
+<%= link_to 'Back', musics_path %>
